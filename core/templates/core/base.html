@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienvenido a Fundación Mis Perris</title>
+    {% load static %}
+    
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
+    <script src="{% static 'core/js/inicializacion.js' %}"></script>
+</head>
+<body>
+        <header>
+                <img class="logo" src="{% static 'core/img/logo.png' %}" alt="Logo">
+                <ul class="navegacion">
+                    <li>
+                        <a href="{% url 'home' %}">
+                            <p>Inicio</p>
+                        </a>
+                    </li>
+    
+                   
+                    <li>
+                        <a href="#">Quienes somos</a>
+                    </li>
+                     <li>
+                        <a href="{% url 'galeria' %}">Galeria</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'registroPostulante' %}">Contactanos</a>
+                    </li>
+                </ul>
+            </header>
+        <div class="landing">
+            <div class="slider">
+                <div>
+                    <img title="Apolo" class="imagen_landing" src=" {% static 'core/img/Apolo.jpg' %}" alt="Perros" >                
+                </div>
+                <div>
+                    <img title="Tom" class="imagen_landing" src="{% static 'core/img/Tom.jpg' %}" alt="Perros">
+                </div>
+                <div>
+                    <img title="Duque" class="imagen_landing" src="{% static 'core/img/Duque.jpg' %}" alt="Perros">
+                </div>
+            </div>
+    
+            <div class="landing_inferior">
+                <h5 class="eslogan">+56 9 98765431</h5>
+                <h5 class="mensaje">Rescate y adopción de perros callejeros</h5>
+                <ul class="social">
+                    <li>
+                        <a href="http://twitter.com" target="_blank">
+                            
+                            <img src="{% static 'core/img/social-twitter.png' %}" alt="twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <img src="{% static 'core/img/socialfacebook.png' %}" alt="facebook">
+                    </li>
+                    <li>
+                        <img src="{% static 'core/img/social-inst.png' %}" alt="instagram">
+                    </li>
+                    <li>
+                        <img src="{% static 'core/img/socialplus.png' %}" alt="Google">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        
+      
+        <div class="contenido">
+            <div>
+     <h1 class="titulo_contenido" >RESCATE</h1>
+     <br>
+     <h4 class="subtitulo_contenido" >ETAPA UNO</h4>
+     <br>
+     <hr class="linea">
+     <br>
+     <p class="texto_contenido">Rescatamos perros en situacion de peligro y/o abandono.Los rehabilitamos y los</p>
+     <p class="texto_contenido"> preparamos para buscarles un hogar</p>
+     <br>
+     <br>
+    
+     <img class="rescate_logo" src="{% static 'core/img/rescate.jpg' %}" alt="rescate_perro">
+     </div>
+     
+     <div>
+     
+         <img class="comida_logo" src="{% static 'core/img/crowfunding.jpg' %}" alt="comida">
+         <h1 class="titulo_contenido1">CROWDFUNDING</h1>
+         <br>
+         <h4 class="subtitulo_contenido1" >FINANCIAMIENTO</h4>
+         <br>
+         <hr  class="linea2">
+         <br>
+         <p class="texto_contenido1">Sigue nuestas redes sociales para informarte acerca de las diversas campañas y </p>
+         <p class="texto_contenido1">actividades que realizamos para obtener financiamiento para seguir ayudando</p>
+         <br>
+         <br>
+     
+     </div>
+     
+        </div>
+        
+        <div>
+         <button class="boton">Campañas</button>
+        </div>
+        
+
+        
+        
+        
+            
+    
+        </div>
+
+    
+    <div class = 'contenido'>
+        {% block contenido %}
+
+     
+
+        {%  endblock contenido %}
+    </div>
+
+
+    <footer>
+         <h4 class="texto_footer">Desarrollo web y mobile</h4>
+     </footer>
+
+</body>
+</html>

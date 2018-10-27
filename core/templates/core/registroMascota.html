@@ -1,0 +1,80 @@
+{% extends 'core/base.html' %}
+
+
+{% block contenido %}
+
+    
+<div class="contact-main">
+        <form action="" name = "registroMascota"  id="registroMascota" method=POST>
+            {% csrf_token %}
+            <table>
+    
+                    <label for="">Registrar Mascota</label>
+                    <br>
+                    <br>
+    
+                    <label for="txtRut">Rut</label>
+                    <input type="text" name="txtRut" id="txtRut">
+                    <br>
+                    <label for="txtNombreCompleto">Nombre Completo</label>
+                    <input type="text" name="txtNombreCompleto" id="txtNombreCompleto" placeholder="Ingrese Nombre Completo ">
+                    <br>
+                    <label for="dtpFechaNacimiento">Fecha Nacimiento:</label>
+                    <input type="date" name="dtpFechaNacimiento" id="dtpFechaNacimiento" >
+                    <br>
+                    <label for="txtEmail">Email</label>
+                    <input type="email" name="txtEmail" id="txtEmail" placeholder="Ingrese Email" >
+                    <br>
+                    <label for="txtTelefono">Telefono</label>
+                    <input type="int" name="txtTelefono" id="txtTelefono"  placeholder="Ingrese  telefono">
+                    <br>
+                    <label for="cboRegion">Region: </label>
+                    <select name="cboRegion" id="cboRegion"  >
+                            {% for r in Region %}
+                            <option value="0">Seleccionar Region</option>
+                            <option value="{{r.id}}" >{{r.Nregion}}</option>
+                            {% endfor %}
+    
+           
+                    </select>
+                    <br>
+                    <label for="cboCiudad">Ciudad:</label>
+                        <select name="cboCiudad" id="cboCiudad">
+                                {%for c in Ciudad %}
+                                        <option value="0">Seleccione Region</option>
+                                         <option value="{{c.id}}">{{c.Nciudad}}</option>
+                                {% endfor %}
+
+        
+                        </select>
+                        <br>
+                        <label for="cboComuna">Comuna</label>
+                        <select name="cboComuna" id="cboComuna">
+                        
+                                {%for c in Comuna  %}
+                                        <option value="0">Seleccione</option>
+                                        <option value="{{c.id}}">{{c.nombre}}</option>
+                                {% endfor %}
+    
+                        </select>
+                        <br>
+                    <label for="">Tipo Vivienda: </label>
+                    <option value="0">Seleccione</option>
+                    {%for v in TipoVivienda %}
+                         <option value="{{v.id}}">{{v.dtipoVivienda}}</option>
+                   {% endfor %}
+                    <br>
+    
+                    <input type="submit" value="Guardar"  id="btnGuardar">
+    
+            </table>
+       
+    
+    
+    
+    
+    
+    
+    
+        </form>
+{% endblock contenido %}

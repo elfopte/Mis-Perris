@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="galeria"> 
+        <a data-fancybox="gallery"  title="Oso" href="{% static 'core/img/Oso.jpg' %}"><img  src="{% static 'core/img/Oso.jpg' %}" ></a>
+        <a data-fancybox="gallery"  title="Chocolate" href="{% static 'core/img/Chocolate.jpg' %}"><img  src="{% static 'core/img/Chocolate.jpg' %}"></a>
+        <a data-fancybox="gallery"  title="Bigotes" href="{% static 'core/img/Bigotes.jpg' %}"><img class="img" src="{% static 'core/img/Bigotes.jpg' %"></a>
+        <a data-fancybox="gallery"  title="Maya" href="{% static 'core/img/Maya.jpg' %}"><img src="{% static 'core/img/Maya.jpg' %}"></a>
+        <a data-fancybox="gallery"  title="Pexel" href="{% static 'core/img/Pexel.jpg' %}"><img src="{% static 'core/img/Pexel.jpg' %}"></a>
+        <a data-fancybox="gallery"  title="Luna" href="{% static 'core/img/Luna.jpg' %}"><img src="{% static 'core/img/Luna.jpg' %}"></a>
+        <a data-fancybox="gallery"  title="Wifi" href="{% static 'core/img/Wifi.jpg' %}"><img src="{% static 'core/img/Wifi.jpg' %}"></a>
+    
+    </div>
+
+{% endblock contenido %}
